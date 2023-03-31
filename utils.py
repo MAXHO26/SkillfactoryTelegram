@@ -28,8 +28,3 @@ class Converter:
 		r = requests.get(f"https://api.apilayer.com/fixer/convert?to={keys[base]}&from={keys[quote]}&amount={amount}", headers= {"apikey": "Rt2DJOAA5zlMR8zoq1ssmvToT9a63hZK"})
 		h = f'Цена {amount} {quote}  ' + str(json.loads(r.content)['result'])+" " + f'в валюте {base}'
 		return h
-
-
-
-
-
